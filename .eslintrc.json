@@ -1,7 +1,12 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb"],
-  "rules":{
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "semi":"off"
+  "extends": ["next/core-web-vitals", "airbnb", "plugin:prettier/recommended"],
+  "plugins": ["prettier"], // Activating eslint-plugin-prettier --rules
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".tsx"] }
+    ],
+    "semi": "off",
+    "prettier/prettier": "error" // Turn on the plugin rule
   }
 }
